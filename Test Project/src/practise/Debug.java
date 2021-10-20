@@ -5,7 +5,10 @@ public class Debug {
 			Calculator calc = new Calculator();
 			int sum = calc.add(10, 20);
 			System.out.println("the sum is--"+sum);
-
-			throw new NullPointerException();
+			int n=10;
+			for(int i=1; i<=n; i++)
+			{
+				sum=sum+n;
+			}
 		}
 }
