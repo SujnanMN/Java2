@@ -1,9 +1,8 @@
-package abstracttt;
+package interfaces;
 
 public class Wiring {
 
 	public static void main(String[] args) {
-		//wiring
 		ISwitchBoardListener sListener = new SolarAppliances();
 
 		sListener.switchOne();

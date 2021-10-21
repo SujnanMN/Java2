@@ -1,4 +1,4 @@
-package abstracttt;
+package interfaces;
 
 public interface ISwitchBoardListener {
 
