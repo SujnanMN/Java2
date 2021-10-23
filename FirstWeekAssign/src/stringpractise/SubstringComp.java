@@ -20,7 +20,8 @@ public class SubstringComp {
 			if (c.compareTo(min)<0)
 			min=c;
 		}
-		System.out.println(1+min+" "+2+max);
+		System.out.println("Mininmum is: "+min);
+		System.out.println("Maximum is: "+max);
 		scan.close();
 
 	}
