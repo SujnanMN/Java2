@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 /**
  * controller controls the incoming requests ie it maps the url to a java method
@@ -14,15 +14,21 @@ import org.springframework.web.bind.annotation.RestController;
  *
  */
 @RestController
-public class StudentControl{
-
+public class StudentControl {
+	
 	@Autowired
 	StudentService studentService;
-
+	
 	@RequestMapping("/students")
 	public List<Student> getStudents(){
-
 		return studentService.getStudents();
+
+	}
+
+	@RequestMapping("/students/{id}")
+	public Student findStudent(@PathVariable int id){//in url path there's a variable
+
+		return studentService.findStudent(id);
 
 	}
 
